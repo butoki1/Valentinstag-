@@ -1,0 +1,124 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="de">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
+  <title>Wichtige Frage \uc0\u55357 \u56460 </title>\
+  <style>\
+    body \{\
+      margin: 0;\
+      font-family: Arial, Helvetica, sans-serif;\
+      background: linear-gradient(135deg, #ff9ecb, #ffd6e7);\
+      height: 100vh;\
+      display: flex;\
+      align-items: center;\
+      justify-content: center;\
+      text-align: center;\
+      color: #333;\
+    \}\
+\
+    .card \{\
+      background: white;\
+      padding: 40px;\
+      border-radius: 24px;\
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);\
+      max-width: 400px;\
+      width: 90%;\
+    \}\
+\
+    h1 \{\
+      margin-bottom: 10px;\
+    \}\
+\
+    p \{\
+      margin-bottom: 30px;\
+      font-size: 18px;\
+    \}\
+\
+    .buttons \{\
+      position: relative;\
+      height: 120px;\
+    \}\
+\
+    button \{\
+      padding: 14px 22px;\
+      border: none;\
+      border-radius: 999px;\
+      font-size: 16px;\
+      cursor: pointer;\
+      transition: transform 0.2s ease;\
+      position: absolute;\
+    \}\
+\
+    #yes \{\
+      background: #ff4d8d;\
+      color: white;\
+      left: 50%;\
+      transform: translateX(-120%);\
+    \}\
+\
+    #no \{\
+      background: #eee;\
+      left: 50%;\
+      transform: translateX(20%);\
+    \}\
+\
+    button:hover \{\
+      transform: scale(1.08);\
+    \}\
+\
+    .hidden \{\
+      display: none;\
+    \}\
+\
+    .result \{\
+      font-size: 22px;\
+      font-weight: bold;\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <div class="card">\
+    <h1>Kurze Frage \uc0\u55357 \u56470 </h1>\
+    <p>M\'f6chtest du am Valentinstag mit mir ausgehen? \uc0\u55356 \u57145 </p>\
+\
+    <div class="buttons" id="buttons">\
+      <button id="yes">Ja \uc0\u55357 \u56472 </button>\
+      <button id="no">Nein</button>\
+    </div>\
+\
+    <div id="result" class="hidden result">\
+      Yaaay! \uc0\u55356 \u57225  Dann plane ich etwas Sch\'f6nes f\'fcr uns \u55357 \u56844 \
+    </div>\
+  </div>\
+\
+  <script>\
+    const noBtn = document.getElementById("no");\
+    const yesBtn = document.getElementById("yes");\
+    const result = document.getElementById("result");\
+    const buttons = document.getElementById("buttons");\
+\
+    function moveNoButton() \{\
+      const x = Math.random() * 200 - 100;\
+      const y = Math.random() * 80 - 40;\
+      noBtn.style.transform = `translate($\{x\}px, $\{y\}px)`;\
+    \}\
+\
+    noBtn.addEventListener("mouseover", moveNoButton);\
+    noBtn.addEventListener("click", moveNoButton);\
+\
+    yesBtn.addEventListener("click", () => \{\
+      buttons.classList.add("hidden");\
+      result.classList.remove("hidden");\
+    \});\
+  </script>\
+</body>\
+</html>\
+}
